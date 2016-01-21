@@ -13,7 +13,7 @@ function initializePage() {
 		$(".jumbotron h1").text("Javascript is ruining my life");
 		$("testjs").text("Please wait...");
 		$(".jumbotron p").toggleClass("active");
-		$("#submitBtn").click(updateProject); 
+		$("#submit").click(updateProject); 
 	});
 
 	// Add any additional listeners here
@@ -22,13 +22,13 @@ function initializePage() {
 }
 
 function updateProject(e) {
-   var projectID = $('#project').val();
-   $(projectID).animate({
+   var projectDim = $('#project').val();
+   $(projectDim).animate({
       width: $('#width').val()
    });
 
-   var newText = $('#description').val();
-   $(projectID + " .project-description").text(newText);
+   var newDesc = $('#description').val();
+   $(projectDim + " .project-description").text(newDesc);
 }
 
 function projectClick(e) {
@@ -49,4 +49,4 @@ function projectClick(e) {
        var images = $(containingProject).find(".img");
     $(images).fadeToggle();
     }
- } 
+}  
